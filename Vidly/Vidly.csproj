@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -126,7 +132,30 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905172037367_InitialModel.cs" />
+    <Compile Include="Migrations\201905172037367_InitialModel.Designer.cs">
+      <DependentUpon>201905172037367_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905172046433_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201905172046433_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201905172046433_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905172051272_AddMembershipType.cs" />
+    <Compile Include="Migrations\201905172051272_AddMembershipType.Designer.cs">
+      <DependentUpon>201905172051272_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905172053259_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201905172053259_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201905172053259_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905172058518_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201905172058518_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201905172058518_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\MovieStoreDB.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
@@ -189,6 +218,23 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905172037367_InitialModel.resx">
+      <DependentUpon>201905172037367_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905172046433_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201905172046433_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905172051272_AddMembershipType.resx">
+      <DependentUpon>201905172051272_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905172053259_PopulateMembershipTypes.resx">
+      <DependentUpon>201905172053259_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905172058518_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201905172058518_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
