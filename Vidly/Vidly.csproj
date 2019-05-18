@@ -164,8 +164,21 @@
     <Compile Include="Migrations\201905172241361_AddBirthdateToCustomer.Designer.cs">
       <DependentUpon>201905172241361_AddBirthdateToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905172301313_AddMovie.cs" />
+    <Compile Include="Migrations\201905172301313_AddMovie.Designer.cs">
+      <DependentUpon>201905172301313_AddMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905180004392_Genres.cs" />
+    <Compile Include="Migrations\201905180004392_Genres.Designer.cs">
+      <DependentUpon>201905180004392_Genres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905180013014_GenresFixed.cs" />
+    <Compile Include="Migrations\201905180013014_GenresFixed.Designer.cs">
+      <DependentUpon>201905180013014_GenresFixed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\MovieStoreDB.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -214,6 +227,7 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\MovieDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -255,6 +269,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905172241361_AddBirthdateToCustomer.resx">
       <DependentUpon>201905172241361_AddBirthdateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905172301313_AddMovie.resx">
+      <DependentUpon>201905172301313_AddMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905180004392_Genres.resx">
+      <DependentUpon>201905180004392_Genres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905180013014_GenresFixed.resx">
+      <DependentUpon>201905180013014_GenresFixed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
