@@ -15,7 +15,7 @@ namespace Vidly.Controllers
 
         public MoviesController()
         {
-            _context = new MovieStoreDB();;
+            _context = new MovieStoreDB();
         }
 
         protected override void Dispose(bool disposing)
